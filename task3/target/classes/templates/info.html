@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manufacturer Info</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/manufacturer/info">General Info</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1 th:text="${manufacturer.name}">Manufacturer Name</h1>
+        <p>Country: <span th:text="${manufacturer.country}">Country</span></p>
+        <p>Employees: <span th:text="${manufacturer.employeeCount}">Employee Count</span></p>
+        <p th:text="${manufacturer.description}">Short Description</p>
+        <img th:src="@{${manufacturer.logo}}" alt="Logo"/>
+    </main>
+</body>
+</html>
